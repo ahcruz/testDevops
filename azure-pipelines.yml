@@ -17,3 +17,12 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+# MSBuild
+# Build with MSBuild
+- task: MSBuild@1
+  inputs:
+    solution: '**/*.sln' 
+    msbuildLocationMethod: 'version'
+    msbuildVersion: 'latest' 
+    msbuildArchitecture: 'x86'     
